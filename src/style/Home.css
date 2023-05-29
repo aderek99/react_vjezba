@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@100&family=Sigmar&family=Titan+One&display=swap');
+
+.background-image {
+    background-size: auto;
+    opacity: 50%;
+}
+
+.background-image p {
+    position: absolute;
+    bottom: 20px;
+    padding-left: 20px;
+    font-family: 'Anton', sans-serif;
+    font-size: 45px;
+    color: white;
+}
+
+.background-image img {
+    height: 100%;
+    width: 100%;
+}
+
+.sectionHome{
+    padding: 15px 270px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
