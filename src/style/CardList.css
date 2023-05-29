@@ -1,0 +1,14 @@
+.section {
+    font-family: "Figtree", sans-serif;
+    font-size: 1rem;
+    padding: 15px 270px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+
+    
+}
+
+.container {
+    text-align: center;
+
+  }
