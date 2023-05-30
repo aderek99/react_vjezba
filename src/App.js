@@ -9,6 +9,8 @@ import Home from "./component/Home";
 import "../src/style/App.css";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "./component/NotFound";
+import Card from "./component/Card";
+import MovieDetails from "./component/MovieDetails";
 
 const savedLocalStorage = JSON.parse(
   localStorage.getItem("favourites") || "[]"
@@ -109,6 +111,10 @@ function App() {
               removeFav={removeFavouriteMovie}
             />
           }
+        />
+        <Route
+          path="/movieList/:id"
+          element={<MovieDetails/>}
         />
         <Route
           path="/favoriteMovie"

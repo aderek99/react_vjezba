@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "./Card";
 import "../style/CardList.css";
+import { Link } from "react-router-dom";
 
 const CardList = ({ movies, addToFavorites, removeFav, favourites }) => {
   const sortedMovies = [...movies].sort((a, b) => {
@@ -18,6 +19,7 @@ const CardList = ({ movies, addToFavorites, removeFav, favourites }) => {
       <div className="container">
         <div className="section">
           {sortedMovies.map((movie, index) => (
+            <Link to={`/movieList/${movie.id}`}>
             <Card
             favourites={favourites}
               film={movie}
@@ -25,6 +27,7 @@ const CardList = ({ movies, addToFavorites, removeFav, favourites }) => {
               addToFavorites={addToFavorites}
               removeFav={removeFav}
             />
+            </Link>
           ))}
         </div>
       </div>

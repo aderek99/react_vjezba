@@ -1,11 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
+import "../style/NotFound.css";
 
-export class NotFound extends Component {
-  render() {
-    return (
-      <div>NotFound</div>
-    )
-  }
-}
+const NotFound = () => {
+  return (
+    <div>
+      <p  className="error">Page not found 404!</p>
+    </div>
 
-export default NotFound
+  );
+};
+
+export default NotFound;

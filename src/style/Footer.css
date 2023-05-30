@@ -1,7 +1,9 @@
 .footer-basic {
     padding:40px 0;
-    background-color:black;
+    background-color: 	#1a1a1a;
     color:white;
+    margin-top:calc(23% + 55px);
+
   }
   
   .footer-basic ul {

@@ -2,7 +2,6 @@ import React from "react";
 import "../style/Header.css";
 import { Link } from "react-router-dom";
 import { FaTv } from "react-icons/fa";
-import { FaSearch } from "react-icons/fa";
 
 const Header = (searchQuery, handleInputChange, searchMovies, searchTerm) => {
   return (
