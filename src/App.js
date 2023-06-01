@@ -9,8 +9,9 @@ import Home from "./component/Home";
 import "../src/style/App.css";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "./component/NotFound";
-import Card from "./component/Card";
 import MovieDetails from "./component/MovieDetails";
+import Register from "./component/Register"
+import Login from "./component/Login";
 
 const savedLocalStorage = JSON.parse(
   localStorage.getItem("favourites") || "[]"
@@ -25,6 +26,8 @@ function App() {
   const [movies, setMovies] = useState([]);
 
   const [searchQuery, setSearchQuery] = useState("");
+  const [showHeader, setShowHeader] = useState(true);
+  const [showFooter, setShowFooter] = useState(true);
 
   useEffect(() => {
     setItem(FAVORITES_MOVIES_CACHE_STORAGE_KEY, JSON.stringify(favourites));
@@ -48,8 +51,8 @@ function App() {
     return item.movie.toLowerCase().includes(searchQuery.toLowerCase());
   });
 
-  // console.log(searchTerm);
-  // console.log(searchQuery)
+  console.log(searchTerm);
+  console.log(searchQuery);
 
   useEffect(() => {
     axios
@@ -78,14 +81,26 @@ function App() {
 
   console.log(favourites);
 
+  const hideHeaderAndFooter = () => {
+    setShowHeader(false);
+    setShowFooter(false);
+  };
+
+  const showHeaderAndFooter = () => {
+    setShowHeader(true);
+    setShowFooter(true);
+  };
+
   return (
-    <>
-      <Header
-        searchQuery={searchQuery}
-        handleInputChange={handleInputChange}
-        searchMovies={searchMovies}
-        searchTerm={searchTerm}
-      />
+    <div>
+      {showHeader && (
+        <Header
+          searchQuery={searchQuery}
+          handleInputChange={handleInputChange}
+          searchMovies={searchMovies}
+          searchTerm={searchTerm}
+        />
+      )}
       <Routes>
         <Route
           path="/"
@@ -96,6 +111,8 @@ function App() {
               favourites={favourites}
               setFavourites={setFavourites}
               removeFav={removeFavouriteMovie}
+              hideHeaderAndFooter={hideHeaderAndFooter}
+              showHeaderAndFooter={showHeaderAndFooter}
             />
           }
         />
@@ -103,18 +120,29 @@ function App() {
           path="/movieList"
           element={
             <CardList
-              // movies={posts}
               movies={searchmovies}
               addToFavorites={addFavouriteMovie}
               favourites={favourites}
               setFavourites={setFavourites}
               removeFav={removeFavouriteMovie}
+              hideHeaderAndFooter={hideHeaderAndFooter}
+              showHeaderAndFooter={showHeaderAndFooter}
+              searchQuery={searchQuery}
+              handleInputChange={handleInputChange}
+              searchMovies={searchMovies}
+              searchTerm={searchTerm}
             />
           }
         />
         <Route
           path="/movieList/:id"
-          element={<MovieDetails/>}
+          element={
+            <MovieDetails
+              movies={posts}
+              hideHeaderAndFooter={hideHeaderAndFooter}
+              showHeaderAndFooter={showHeaderAndFooter}
+            />
+          }
         />
         <Route
           path="/favoriteMovie"
@@ -122,41 +150,35 @@ function App() {
             <FavoriteMovies
               favourites={favourites}
               removeFav={removeFavouriteMovie}
+              hideHeaderAndFooter={hideHeaderAndFooter}
+              showHeaderAndFooter={showHeaderAndFooter}
             />
           }
         />
-        <Route path="*" element={<NotFound />} />
+        <Route
+          path="/login"
+          element={
+            <Login/>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <Register/>
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <NotFound
+              hideHeaderAndFooter={hideHeaderAndFooter}
+              showHeaderAndFooter={showHeaderAndFooter}
+            />
+          }
+        />
       </Routes>
-      <Footer />
-    </>
-    // <div className="main">
-    //   <Header />
-    //   <Link to={'/favoriteMovie'}>Omiljeni</Link>
-    // <div className="flexbox">
-    //   <div className="search">
-    //     <div>
-    // <input
-    //   type="text"
-    //   value={searchQuery}
-    //   onChange={handleInputChange}
-    //   placeholder="Search for movies..."
-    //   onClick={() => searchMovies(searchTerm)}
-    //   required
-    // />
-    //     </div>
-    //   </div>
-    // </div>
-    // <CardList
-    //   // movies={posts}
-    //   movies={searchmovies}
-    //   addToFavorites={addFavouriteMovie}
-    //   favourites={favourites}
-    //   setFavourites={setFavourites}
-    //   removeFav={removeFavouriteMovie}
-    // />
-    //   <FavoriteMovies favorites={favourites} removeFav={removeFavouriteMovie} />
-    //   <Footer />
-    // </div>
+      {showFooter && <Footer />}
+    </div>
   );
 }
 

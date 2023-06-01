@@ -1,5 +1,5 @@
 .sectionFavorite{
-    padding: 15px 270px;
+    padding: 15px 180px;
     display: grid;
     grid-template-columns: auto auto auto auto;
 }

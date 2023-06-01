@@ -1,0 +1,141 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html,
+body {
+    margin: 0;
+    background: black;
+    font-weight: 400;
+}
+
+.detailsH1 {
+    color: #fff;
+    font-weight: 400;
+}
+
+.movie_card {
+    position: relative;
+    display: block;
+    width: 1150px;
+    height: 550px;
+    margin: 25px auto;
+    overflow: hidden;
+    box-shadow: #cee4fd;
+
+    transition: all 0.4s;
+
+    .info_section {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-blend-mode: multiply;
+        z-index: 2;
+
+
+        .movie_header {
+            position: relative;
+            padding: 25px;
+            height: 40%;
+
+
+            .minutes {
+                display: inline-block;
+                margin-top: 10px;
+                color: #fff;
+                padding: 3px;
+                font-size: 13px;
+                border-radius: 5px;
+                border: 1px solid rgba(255, 255, 255, 0.13);
+            }
+
+            .type {
+                display: inline-block;
+                color: #cee4fd;
+
+            }
+
+            .locandina {
+                position: relative;
+                float: left;
+                margin-right: 20px;
+                height: 250px;
+                box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
+            }
+        }
+
+        .movie_desc {
+            padding: 25px;
+            height: 50%;
+
+            .text {
+                color: #cfd6e1;
+                font-size: 15px;
+            }
+        }
+    }
+
+    .blur_back {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        height: 100%;
+        right: 0;
+        background-size: cover;
+
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .movie_header {
+        width: 60%;
+    }
+
+    .movie_desc {
+        width: 50%;
+    }
+
+    .info_section {
+        background: linear-gradient(to right, #0d0d0c 50%, transparent 100%);
+    }
+
+    .blur_back {
+        width: 80%;
+        background-position: -100% 10% !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .movie_card {
+        width: 95%;
+        margin: 70px auto;
+        min-height: 350px;
+        height: auto;
+    }
+
+    .blur_back {
+        width: 100%;
+        background-position: 50% 50% !important;
+    }
+
+    .movie_header {
+        width: 100%;
+        margin-top: 85px;
+    }
+
+    .movie_desc {
+        width: 100%;
+    }
+
+
+}
+
+
+
+
+.bright_back {
+    background: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.maHoHQ8Lb-vq7sWulsYnCAHaEK%26pid%3DApi&f=1&ipt=8290094045ae50a80e57757b895d6f8bb1a158c9997a06f7fc98f5d49c3c68c3&ipo=images");
+}

@@ -3,9 +3,9 @@ import "../style/Header.css";
 import { Link } from "react-router-dom";
 import { FaTv } from "react-icons/fa";
 
-const Header = (searchQuery, handleInputChange, searchMovies, searchTerm) => {
+const Header = () => {
   return (
-    <div>
+
       <header className="header">
         <h1 className="logo">
           Movie Time <FaTv className="iconTv" />
@@ -20,10 +20,16 @@ const Header = (searchQuery, handleInputChange, searchMovies, searchTerm) => {
           <li>
             <Link to="/favoriteMovie">Favorite movies</Link>
           </li>
+          <li>
+            <Link to="/register">Sign up</Link>
+          </li>
+          <li>
+            <Link to="/login">Sign in</Link>
+          </li>
 
         </ul>
       </header>
-    </div>
+
   );
 };
 

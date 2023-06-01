@@ -1,9 +1,11 @@
 import React from "react";
 import Card from "./Card";
 import "../style/CardList.css";
-import { Link } from "react-router-dom";
 
-const CardList = ({ movies, addToFavorites, removeFav, favourites }) => {
+
+
+const CardList = ({ movies, addToFavorites, removeFav, favourites, searchQuery, handleInputChange, searchMovies, searchTerm }) => {
+  
   const sortedMovies = [...movies].sort((a, b) => {
     if (a.movie < b.movie) {
       return -1;
@@ -17,9 +19,20 @@ const CardList = ({ movies, addToFavorites, removeFav, favourites }) => {
   return (
     <>
       <div className="container">
+      <div>
+    <input className="searchMovie"
+      type="text"
+      value={searchQuery}
+      onChange={handleInputChange}
+      placeholder="Search for movies..."
+      onClick={() => searchMovies(searchTerm)}
+      required
+    />
+        </div>
         <div className="section">
+          
           {sortedMovies.map((movie, index) => (
-            <Link to={`/movieList/${movie.id}`}>
+            // <Link to={`/movieList/${movie.id}`}>
             <Card
             favourites={favourites}
               film={movie}
@@ -27,7 +40,7 @@ const CardList = ({ movies, addToFavorites, removeFav, favourites }) => {
               addToFavorites={addToFavorites}
               removeFav={removeFav}
             />
-            </Link>
+            // </Link>
           ))}
         </div>
       </div>
