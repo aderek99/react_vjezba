@@ -7,9 +7,9 @@ const Header = () => {
   return (
 
       <header className="header">
-        <h1 className="logo">
+        <Link to="/"><h1 className="logo">
           Movie Time <FaTv className="iconTv" />
-        </h1>
+        </h1></Link>
         <ul className="main-nav">
           <li>
             <Link to="/">Home</Link>
@@ -25,6 +25,9 @@ const Header = () => {
           </li>
           <li>
             <Link to="/login">Sign in</Link>
+          </li>
+          <li>
+            <Link to="/addMovie">Add new</Link>
           </li>
 
         </ul>

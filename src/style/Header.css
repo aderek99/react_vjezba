@@ -5,7 +5,7 @@
 body {
 	font-family: 'Montserrat', sans-serif;
 	line-height: 1.6;
-	margin: 0;
+
 	min-height: 100vh;
 }
 
@@ -71,6 +71,7 @@ a {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+	padding: 15px;
 }
 
 
@@ -100,12 +101,12 @@ a {
 	}
 
 }
-* {box-sizing: border-box;}
+/* * {box-sizing: border-box;}
 .search-container {
 	float: right;
-  }
+  } */
   
-.search-container input[type=text] {
+/* .search-container input[type=text] {
 	padding: 6px;
 	margin-top: 8px;
 	font-size: 15px;
@@ -125,9 +126,9 @@ a {
   
   .search-container .search-container button:hover {
 	background: #ccc;
-  }
+  } */
 
-  @media screen and (max-width: 600px) {
+  /* @media screen and (max-width: 600px) {
 .search-container {
 	  float: none;
 	}
@@ -142,5 +143,5 @@ a {
 	.search-container input[type=text] {
 	  border: 1px solid #ccc;  
 	}
-  }
+  } */
 

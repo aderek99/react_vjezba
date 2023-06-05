@@ -10,8 +10,9 @@ import "../src/style/App.css";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "./component/NotFound";
 import MovieDetails from "./component/MovieDetails";
-import Register from "./component/Register"
+import Register from "./component/Register";
 import Login from "./component/Login";
+import AddNewMovie from "./component/AddNewMovie";
 
 const savedLocalStorage = JSON.parse(
   localStorage.getItem("favourites") || "[]"
@@ -155,18 +156,9 @@ function App() {
             />
           }
         />
-        <Route
-          path="/login"
-          element={
-            <Login/>
-          }
-        />
-        <Route
-          path="/register"
-          element={
-            <Register/>
-          }
-        />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/addMovie" element={<AddNewMovie />} />
         <Route
           path="*"
           element={

@@ -9,3 +9,21 @@
     text-align: center;
     font-size: 25px;
 }
+
+.containerFav {
+    background-size: auto;
+}
+
+.listP1 {
+    position: absolute;
+    top: 300px;
+    padding-left: 400px;
+    font-family: 'Anton', sans-serif;
+    font-size: 45px;
+    color: white;
+} 
+
+.containerFav img {
+    height: 560px;
+    width: 100%;
+}

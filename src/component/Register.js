@@ -4,7 +4,7 @@ import slika23 from "../images/slika23.jpg";
 
 const Register = () => {
   return (
-    <body className="bod">
+    <div className="bod">
       <div className="register-box">
         <div className="left">
           <h1 className="">Sign up</h1>
@@ -19,13 +19,13 @@ const Register = () => {
           />
           <input type="submit" name="signup_submit" value="Sign me up" />
         </div>
-        <div class="right">
+        <div className="right">
         <img className="imgRight" src={slika23} alt=""/>
       </div>
       </div>
 
 
-    </body>
+    </div>
   );
 };
 

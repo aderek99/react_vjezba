@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "./Card";
 import "../style/CardList.css";
+import slika24 from '../images/slika24.png';
 
 
 
@@ -18,7 +19,12 @@ const CardList = ({ movies, addToFavorites, removeFav, favourites, searchQuery, 
 
   return (
     <>
+    
       <div className="container">
+      <img alt="" src={slika24}/>
+      <p className="listP">Your streaming guide for movies, TV shows & sports</p>
+      <button className="buttonbtn">WATCH</button>
+      
       <div>
     <input className="searchMovie"
       type="text"
