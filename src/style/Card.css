@@ -14,7 +14,6 @@ p {
 
 
 body {
-  /* display: grid; */
   place-items: center;
   height: 100vh;
 }
@@ -42,12 +41,10 @@ p {
 .card {
   background-color: transparent;
   width: 240px;
-  /* height: 254px; */
   position: relative;
   margin: 10px;
   display: grid;
   place-items: center;
-  /* width: 80vw; */
   max-width: 21.875rem;
   height: 25.125rem;
   overflow: hidden;
@@ -84,7 +81,6 @@ p {
 }
 
 .card__content--container {
-  /* --flow-space: 1.25rem; */
   --flow-space: 1.5rem;
 }
 

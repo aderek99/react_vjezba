@@ -1,6 +1,7 @@
 import "../style/Login.css";
 import React from "react";
 import slika23 from "../images/slika23.jpg";
+import { Link } from "react-router-dom";
 
 const Login = () => {
     return(
@@ -11,7 +12,8 @@ const Login = () => {
 
           <input type="text" name="email" placeholder="E-mail" />
           <input type="password" name="password" placeholder="Password" />
-          <input type="submit" name="signup_submit" value="Sign in" />
+          <input type="submit" name="signup_submit" value="Sign in" /><br/>
+          <p className="p">Don't have an account? <Link to="/register" className="link">Sign up</Link></p>
         </div>
         <div className="right">
         <img className="imgRight" src={slika23} alt=""/>

@@ -10,12 +10,26 @@
 }
 
 .searchMovie{
-    padding: 6px;
-    border: none;
     font-size: 17px;
     display: block;
     margin: 0 auto;
     margin-top: 20px;
+    width: 30%;
+    margin-left: 530px;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    font-weight: 500;
+    font-size: 16px;
+    color: #6b7280;
+    outline: none;
+    resize: none;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+
+
 }
 
 .container {
@@ -25,7 +39,7 @@
 .listP {
     position: absolute;
     top: 300px;
-    padding-left: 190px;
+    padding-left: 300px;
     font-family: 'Anton', sans-serif;
     font-size: 45px;
     color: white;
@@ -54,7 +68,7 @@
   transition: all .3s cubic-bezier(.05, .03, .35, 1);
   width: 190px;
   position: absolute;
-  left: 590px;
+  left: 680px;
   top: 400px;
   
 }

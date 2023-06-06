@@ -20,6 +20,9 @@ body{
     padding-top: 100px;
 
   }
+  .signUpH{
+    margin-bottom: 40px !important;
+  }
 
   .left {
     position: absolute;
@@ -34,7 +37,7 @@ body{
 input[type="password"] {
   display: block;
   box-sizing: border-box;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding: 4px;
   width: 220px;
   height: 32px;
@@ -59,13 +62,15 @@ input[type="submit"] {
   height: 32px;
   background: #ff5757;
   border: none;
-  border-radius: 2px;
+  border-radius: 6px;
   color: #FFF;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   transition: 0.1s ease;
   cursor: pointer;
+  display: block;
+  margin: 0 auto;
 }
 
 input[type="submit"]:hover,
@@ -80,8 +85,6 @@ input[type="submit"]:active {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   transition: 0.1s ease;
 }
-
-
 
 .right {
   float: right;

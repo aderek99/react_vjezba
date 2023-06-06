@@ -38,7 +38,6 @@ const CardList = ({ movies, addToFavorites, removeFav, favourites, searchQuery, 
         <div className="section">
           
           {sortedMovies.map((movie, index) => (
-            // <Link to={`/movieList/${movie.id}`}>
             <Card
             favourites={favourites}
               film={movie}
@@ -46,7 +45,6 @@ const CardList = ({ movies, addToFavorites, removeFav, favourites, searchQuery, 
               addToFavorites={addToFavorites}
               removeFav={removeFav}
             />
-            // </Link>
           ))}
         </div>
       </div>

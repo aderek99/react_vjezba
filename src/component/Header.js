@@ -5,34 +5,45 @@ import { FaTv } from "react-icons/fa";
 
 const Header = () => {
   return (
-
-      <header className="header">
-        <Link to="/"><h1 className="logo">
+    <header className="header">
+      <Link to="/">
+        <h1 className="logo">
           Movie Time <FaTv className="iconTv" />
-        </h1></Link>
-        <ul className="main-nav">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/movieList">List of movies</Link>
-          </li>
-          <li>
-            <Link to="/favoriteMovie">Favorite movies</Link>
-          </li>
-          <li>
-            <Link to="/register">Sign up</Link>
-          </li>
-          <li>
+        </h1>
+      </Link>
+      <ul className="main-nav">
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/movieList">List of movies</Link>
+        </li>
+        <li>
+          <Link to="/favoriteMovie">Favorite movies</Link>
+        </li>
+        {/* <li>
+          <Link to="/register">Sign up</Link>
+        </li>
+        <li>
+          <Link to="/login">Sign in</Link>
+        </li> */}
+        <li>
+          <div className="dropdown">
+            <button className="dropbtn">
+            USER 
+            </button>
+            <div className="dropdown-content">
             <Link to="/login">Sign in</Link>
-          </li>
-          <li>
-            <Link to="/addMovie">Add new</Link>
-          </li>
+            <Link to="/register">Sign up</Link>
 
-        </ul>
-      </header>
-
+            </div>
+          </div>
+        </li>
+        <li>
+          <Link to="/addMovie">Add new</Link>
+        </li>
+      </ul>
+    </header>
   );
 };
 

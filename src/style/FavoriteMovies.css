@@ -7,7 +7,9 @@
 .favTitle{
     font-family:"Montserrat", sans-serif;
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .containerFav {
@@ -17,7 +19,7 @@
 .listP1 {
     position: absolute;
     top: 300px;
-    padding-left: 400px;
+    padding-left: 510px;
     font-family: 'Anton', sans-serif;
     font-size: 45px;
     color: white;
