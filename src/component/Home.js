@@ -1,9 +1,11 @@
-import React from 'react';
-import '../style/Home.css';
-import bg2 from '../images/bg2.jpg';
-import Card from './Card';
+import React from "react";
+import "../style/Home.css";
+import bg2 from "../images/bg2.jpg";
+
+import Card from "./Card";
 
 const Home = ({ movies, addToFavorites, removeFav, favourites }) => {
+  
   return (
     <>
       <div className="background-image">
@@ -21,7 +23,7 @@ const Home = ({ movies, addToFavorites, removeFav, favourites }) => {
               removeFav={removeFav}
             />
           ))}
-      </div>
+      </div>       
     </>
   );
 };

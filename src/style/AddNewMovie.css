@@ -111,5 +111,32 @@ body{
 
 
 
+@media only screen and (max-device-width: 480px) {
+  .subject {
+      height: auto;
+      width: 100%;
+      padding: 10px;
+  }
 
+  .bodi {
+      padding: 50px;
+  }
+
+  .add-box {
+      width: 100%;
+      height: auto;
+      padding: 20px;
+  }
+
+  .left {
+      margin-right: 0;
+  }
+
+  .add-box input[type="text"],
+  .add-box input[type="number"],
+  .add-box textarea[type="text"] {
+      width: 100%;
+      margin-left: 0;
+  }
+}
 

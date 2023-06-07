@@ -5,8 +5,6 @@
     display: grid;
     grid-template-columns: auto auto auto auto;
     padding-top: 50px;
-
-    
 }
 
 .searchMovie{
@@ -77,12 +75,41 @@
   opacity: .7;
 }
 
-@media screen and (max-width: 1000px) {
+@media only screen and (max-device-width: 480px) {
+  .section {
+    padding: 15px 65px;
+      grid-template-columns: auto;
+  }
+
+  .searchMovie {
+      width: 50%;
+      margin-left: 100px;
+      margin-top: 10px;
+      padding: 10px;
+      font-size: 14px;
+  }
+
+  .listP {
+      position: absolute;
+      bottom: 10;
+      padding-left: 20px;
+      font-size: 20px;
+  }
+
+  .container img {
+      height: auto;
+      width: 100%;
+  }
+
   .buttonbtn {
-    font-size: 14px;
-    height: 55px;
-    line-height: 55px;
-    width: 150px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 13px;
+      height: 45px;
+      width: 75px;
+      line-height: 10px;
+      top: 360px;
+      
   }
 }
 

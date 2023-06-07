@@ -52,8 +52,8 @@ function App() {
     return item.movie.toLowerCase().includes(searchQuery.toLowerCase());
   });
 
-  console.log(searchTerm);
-  console.log(searchQuery);
+  // console.log(searchTerm);
+  // console.log(searchQuery);
 
   useEffect(() => {
     axios
